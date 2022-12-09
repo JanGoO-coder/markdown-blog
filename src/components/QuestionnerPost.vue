@@ -1,12 +1,12 @@
 <script setup>
-import { computed } from 'vue'
-import { marked } from 'marked'
+import { computed, onBeforeMount, onMounted, ref } from "vue"
+import { marked } from "marked"
 
-const props = defineProps(['markdown'])
+const props = defineProps(["content"])
 
 const markdowntohtml = computed(() => {
-    return marked.parse(props.markdown);
-});
+    return marked.parse(props.content)
+})
 </script>
 
 <template>
