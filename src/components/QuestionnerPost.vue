@@ -10,5 +10,5 @@ const markdowntohtml = computed(() => {
 </script>
 
 <template>
-    <div v-html="markdowntohtml"></div>
+    <div v-html="markdowntohtml" class="prose lg:prose-xl"></div>
 </template>
