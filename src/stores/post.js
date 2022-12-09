@@ -7,6 +7,7 @@ export const usePostStore = defineStore("post", () => {
   const posts = ref([])
 
   async function fetchPosts() {
+    posts.value = []
     const q = query(collection(db, "posts"))
     const querySnapshot = await getDocs(q)
     querySnapshot.forEach((doc) => {
